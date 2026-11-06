@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avaliação de Desempenho – Orientações aos Alunos</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--tx:#1d2433;--mut:#5b6578;--pri:#3d8fd1;--pri-d:#2a6fa8;--bd:#dfe5ef;--acc:#6f4fd1;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161f;--card:#1b2130;--tx:#eaeef7;--mut:#a3adc2;--bd:#2c3547;--pri:#5aa6e6;--pri-d:#7fbcf0;--acc:#a58cff}}
+:root[data-theme="dark"]{--bg:#12161f;--card:#1b2130;--tx:#eaeef7;--mut:#a3adc2;--bd:#2c3547;--pri:#5aa6e6;--pri-d:#7fbcf0;--acc:#a58cff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--bd);display:flex;gap:6px;overflow-x:auto;padding:10px 14px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:10}
+nav a{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:600;text-decoration:none;color:var(--mut);border:1px solid var(--bd)}
+nav a.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+main{max-width:980px;margin:0 auto;padding:24px 16px 60px}
+section{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:28px;margin-bottom:22px}
+.n{font-size:13px;color:var(--mut);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+h1{font-size:clamp(24px,4vw,34px);margin:0 0 16px;line-height:1.2}
+h2{font-size:clamp(21px,3.4vw,28px);margin:0 0 6px;color:var(--pri-d)}
+.sub{color:var(--mut);margin:0 0 18px}
+ul{list-style:none;padding:0;margin:0}
+li{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--bd)}
+li:first-child{border-top:0}li .i{flex:none;font-size:22px;line-height:1.4}
+.lead{font-weight:600;font-size:19px;margin:0 0 10px}
+.tip{margin-top:16px;padding:14px 16px;border-left:4px solid var(--acc);background:var(--bg);border-radius:8px}
+.chk li .i{color:var(--acc)}
+.scale{border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+.sh{background:var(--pri);color:#fff;text-align:center;padding:8px;font-weight:700;font-size:13px;letter-spacing:.05em}
+.sq{background:var(--pri);color:#fff;text-align:center;padding:10px 12px;font-weight:600;border-top:1px solid #ffffff55}
+.sc{overflow-x:auto}.grid{min-width:640px}
+.ends{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:var(--mut);padding:10px 12px 4px}
+.ends span{flex:1}.ends span:last-child{text-align:right}
+.row{display:grid;grid-template-columns:150px 60px repeat(11,1fr);align-items:center;border-top:1px solid var(--bd)}
+.row>*{padding:10px 4px;text-align:center}
+.row.x{grid-template-columns:150px repeat(11,1fr)}
+.row .nm{font-size:12px;font-weight:600;text-transform:uppercase;text-align:left;padding-left:12px}
+.hd .b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;color:#fff;font-size:11px;font-weight:700}
+.hd .t{font-size:11px;color:var(--mut)}
+.cell{cursor:pointer;display:grid;place-items:center;height:46px;padding:0!important}
+.cell input{appearance:none;width:20px;height:20px;border-radius:50%;border:2px solid var(--c);background:transparent;margin:0;cursor:pointer}
+.cell input:checked{background:var(--c);box-shadow:inset 0 0 0 3px var(--card)}
+.cell:hover{filter:brightness(.95)}
+.sw{appearance:none;width:30px;height:16px;border-radius:9px;background:var(--bd);position:relative;cursor:pointer;margin:0}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:#fff;transition:.15s}
+.sw:checked{background:var(--pri)}.sw:checked::after{left:16px}
+.row.off .cell{opacity:.3;pointer-events:none}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
+.rem{margin-top:16px;padding:14px 16px;background:var(--bg);border-radius:8px;font-size:16px}
+.pg{display:flex;justify-content:space-between;max-width:980px;margin:0 auto;padding:0 16px 40px}
+.pg a{color:var(--pri-d);text-decoration:none;font-weight:600}
+@media(max-width:560px){section{padding:20px 16px}}
+</style>
+</head>
+<body>
+<nav id="nav" aria-label="Slides"></nav>
+<main id="m">
+
+<section id="s1">
+<div class="n">1 · Orientações</div>
+<h1>Orientações para a Avaliação de Desempenho</h1>
+<p class="lead">📝 Sua opinião é importante! Avalie com responsabilidade.</p>
+<ul class="chk">
+<li><span class="i">✔</span><span>Avalie <b>o desempenho profissional</b>, e não características pessoais do servidor.</span></li>
+<li><span class="i">✔</span><span>Reflita sobre <b>todo o ano letivo</b>, e não apenas acontecimentos recentes.</span></li>
+<li><span class="i">✔</span><span>Baseie sua avaliação em <b>fatos, experiências e observações reais</b>.</span></li>
+<li><span class="i">✔</span><span>Seja <b>justo, imparcial e respeitoso</b> ao atribuir sua nota.</span></li>
+<li><span class="i">✔</span><span>Considere que <b>todos os profissionais contribuem para o funcionamento da escola</b>, cada um em sua função.</span></li>
+<li><span class="i">✔</span><span>Evite que amizade, simpatia, desentendimentos ou conflitos pessoais influenciem sua avaliação.</span></li>
+<li><span class="i">✔</span><span>Leia atentamente o significado da escala antes de escolher a nota.</span></li>
+<li><span class="i">✔</span><span>Se você <b>não conhece o trabalho do profissional</b>, utilize a opção “Não sei avaliar”.</span></li>
+<li><span class="i">✔</span><span>Lembre-se: esta avaliação tem como objetivo <b>melhorar a qualidade da escola</b>, fortalecendo os pontos positivos e identificando oportunidades de melhoria.</span></li>
+</ul>
+</section>
+
+<section id="s2" data-sc='["Apoio ao desenvolvimento","O Diretor, Vice Diretor e Coordenadores estão disponíveis para te ajudar?","O Diretor, Vice Diretor e Coordenadores não ajudam os estudantes.","O Diretor, Vice Diretor e Coordenadores estão sempre disponíveis para ajudar os estudantes.",1]'><div class="n">2 · Escala</div></section>
+
+<section id="s3">
+<div class="n">3 · Importante</div>
+<h2>Importante</h2>
+<p class="sub">Pense nas situações do dia a dia da escola. O Diretor, Vice-Diretor e Coordenadores:</p>
+<ul>
+<li><span class="i">✅</span><span>Escutam os estudantes quando há um problema?</span></li>
+<li><span class="i">✅</span><span>Ajudam a resolver conflitos, desentendimentos e casos de bullying?</span></li>
+<li><span class="i">✅</span><span>Atendem quando um aluno passa mal ou precisa de apoio?</span></li>
+<li><span class="i">✅</span><span>Estão presentes nos corredores, pátio e salas, acompanhando a rotina?</span></li>
+<li><span class="i">✅</span><span>Procuram soluções quando os estudantes apresentam dificuldades? No caso das tarefas, por exemplo, cobra junto com os professores? Conversa na reunião de pais?</span></li>
+</ul>
+<div class="tip">💡 <b>Dica:</b> Baseie sua resposta nas experiências que você viveu durante o ano. Não avalie por um único acontecimento, por amizade ou por antipatia.</div>
+</section>
+
+<section id="s4" data-sc='["Convivência","O Diretor, Vice Diretor e Coordenadores conseguem criar na escola um ambiente tranquilo?","A escola tem muito bullying, ameaças e brigas.","A escola tem um ambiente tranquilo, seguro e acolhedor.",0]'><div class="n">4 · Escala</div></section>
+
+<section id="s5">
+<div class="n">5 · Importante</div>
+<h2>Importante</h2>
+<p class="sub">O que considerar ao responder? Pense em situações como:</p>
+<ul>
+<li><span class="i">🤝</span><span>Os profissionais conversam com os alunos quando há situações de desentendimentos? Há registros de ocorrências?</span></li>
+<li><span class="i">🗣️</span><span>Escutam os alunos quando eles precisam conversar? Quando necessário são encaminhados ao psicólogo?</span></li>
+<li><span class="i">🚫</span><span>Tomam providências quando há bullying ou desrespeito? Conversam com os envolvidos? A escola tolera preconceito?</span></li>
+<li><span class="i">😊</span><span>Recebem os estudantes com respeito e educação?</span></li>
+<li><span class="i">👀</span><span>Estão presentes nos corredores, pátio e entrada da escola?</span></li>
+<li><span class="i">💙</span><span>Demonstram preocupação com o bem-estar dos alunos? Se um aluno passa mal por exemplo, é chamado o responsável?</span></li>
+</ul>
+</section>
+
+<section id="s6" data-sc='["Liderança","O Diretor, Vice Diretor e Coordenadores fazem da escola um local organizado?","A escola é muito bagunçada e muitas coisas não funcionam.","A escola é organizada, agradável e tudo funciona.",0]'><div class="n">6 · Escala</div></section>
+
+<section id="s7">
+<div class="n">7 · Importante</div>
+<h2>Importante</h2>
+<p class="sub">Pense em situações como:</p>
+<ul>
+<li><span class="i">🏫</span><span>A escola está limpa, organizada e bem cuidada? Se às vezes não está, a culpa é da gestão ou dos próprios alunos que não mantém a escola e as salas limpas?</span></li>
+<li><span class="i">⏰</span><span>Os horários e a rotina da escola são cumpridos? Tem horário certo para refeições, intervalos, troca de aulas, clubes e demais aulas?</span></li>
+<li><span class="i">📚</span><span>As aulas acontecem normalmente? Há muitas dispensas? Há aulas vagas? Há aulas sem substituição?</span></li>
+<li><span class="i">🚪</span><span>Os espaços (salas, pátio, banheiros e corredores) são bem organizados? Se não são organizados é por culpa dos profissionais?</span></li>
+<li><span class="i">🤝</span><span>Os profissionais trabalham juntos para que a escola funcione bem? Cada um faz o seu papel?</span></li>
+<li><span class="i">✅</span><span>As regras da escola são claras? Todos sabem o que é permitido ou não? E se não são cumpridos é por culpa de quem?</span></li>
+</ul>
+</section>
+
+<section id="s8" data-sc='["Conteúdo","O professor explica bem?","Não explica bem e não se preocupa se eu aprendi.","Explica muito bem e se preocupa se eu aprendi.",2]'><div class="n">8 · Escala</div></section>
+
+<section id="s9">
+<div class="n">9 · Importante</div>
+<h2>Importante</h2>
+<p class="sub">Pense em situações como:</p>
+<ul>
+<li><span class="i">📚</span><span>O professor explica o conteúdo de forma clara e fácil de entender?</span></li>
+<li><span class="i">🙋</span><span>Quando os alunos têm dúvidas, ele explica novamente?</span></li>
+<li><span class="i">👀</span><span>Demonstra interesse para que todos aprendam?</span></li>
+<li><span class="i">💬</span><span>Incentiva perguntas e participa das discussões em sala?</span></li>
+<li><span class="i">📝</span><span>Corrige atividades e dá orientações para melhorar?</span></li>
+<li><span class="i">🎯</span><span>Relaciona o conteúdo com exemplos do dia a dia?</span></li>
+<li><span class="i">🤝</span><span>Trata os alunos com respeito e paciência durante as explicações?</span></li>
+<li><span class="i">📖</span><span>Mantém as aulas organizadas e focadas na aprendizagem?</span></li>
+</ul>
+</section>
+
+<section id="s10" data-sc='["Metodologia","O professor realiza aulas que promovem a participação da turma?","Só o professor fala e os alunos não participam.","As aulas são dinâmicas e os alunos participam ativamente.",0]'><div class="n">10 · Escala</div></section>
+
+<section id="s11">
+<div class="n">11 · Importante</div>
+<h2>Importante</h2>
+<p class="sub">Pense em situações como:</p>
+<ul>
+<li><span class="i">🎯</span><span>O professor faz perguntas e incentiva os alunos a participar da aula?</span></li>
+<li><span class="i">🙋</span><span>Dá oportunidade para que todos falem, tirem dúvidas e deem opiniões?</span></li>
+<li><span class="i">👥</span><span>Realiza trabalhos em grupo, debates, apresentações ou outras atividades?</span></li>
+<li><span class="i">🧩</span><span>Utiliza diferentes formas de ensinar, além da explicação no quadro?</span></li>
+<li><span class="i">📚</span><span>Propõe atividades que ajudam os alunos a aprender na prática?</span></li>
+<li><span class="i">👏</span><span>Incentiva a participação de todos, sem deixar apenas alguns alunos responderem?</span></li>
+<li><span class="i">😊</span><span>Torna as aulas interessantes e mantém a turma envolvida?</span></li>
+<li><span class="i">💡</span><span>Demonstra entusiasmo e motiva os estudantes a aprender?</span></li>
+</ul>
+<div class="tip"><b>Lembre-se:</b> avalie considerando todo o ano letivo. Não avalie apenas porque a aula é “divertida” ou “difícil”, mas se a metodologia utilizada realmente favorece a participação e a aprendizagem dos alunos.</div>
+</section>
+
+<section id="s12" data-sc='["Gestão de sala de aula","Como você avalia a organização da aula desse professor?","A aula é bagunçada e a maioria dos alunos não presta atenção.","A aula é organizada e todos os alunos prestam atenção.",2]'><div class="n">12 · Escala</div></section>
+
+<section id="s13">
+<div class="n">13 · Importante</div>
+<h2>Importante</h2>
+<p class="sub">Pense em situações como:</p>
+<ul>
+<li><span class="i">👩‍🏫</span><span>O professor mantém a turma organizada durante a aula?</span></li>
+<li><span class="i">🤫</span><span>Consegue chamar a atenção da turma quando há conversas ou bagunça?</span></li>
+<li><span class="i">⏱️</span><span>Aproveita bem o tempo da aula, evitando interrupções desnecessárias?</span></li>
+<li><span class="i">📚</span><span>Os alunos permanecem envolvidos e realizando as atividades propostas?</span></li>
+<li><span class="i">⚖️</span><span>Aplica as regras da sala de forma justa e respeitosa?</span></li>
+<li><span class="i">🤝</span><span>Trata todos os alunos com respeito, mantendo um ambiente de aprendizagem?</span></li>
+<li><span class="i">📝</span><span>Inicia e encerra a aula de forma organizada?</span></li>
+<li><span class="i">🎯</span><span>A maior parte da turma consegue acompanhar a aula e aprender?</span></li>
+</ul>
+<div class="tip"><b>Lembre-se:</b> avalie considerando todo o ano letivo. Não avalie apenas porque um dia houve bagunça ou porque a turma é agitada. O importante é observar se o professor consegue organizar a sala e criar um ambiente favorável para a aprendizagem.</div>
+</section>
+</main>
+<div class="pg"><a href="#s1">↑ Voltar ao início</a></div>
+
+<script>
+var COL=["#c62828","#d84315","#e65100","#ef6c00","#f9a825","#e6c619","#cddc39","#9ccc2f","#7cb342","#43a047","#2e9d3a"];
+var BG=["#f8dcdc","#f8e0d6","#faead9","#fbf0d9","#fcf3d2","#fbf6d0","#f6f9d0","#eaf6d4","#e0f3d9","#dcf1dd","#d6efd8"];
+var PRO=["Profissional 1","Profissional 2","Profissional 3"];
+document.querySelectorAll("section[data-sc]").forEach(function(s){
+  var d=JSON.parse(s.dataset.sc),idx=s.id.slice(1),h="";
+  var teacher=d[4]>1;var names=teacher?["Professor 1","Professor 2","Professor 3"]:PRO;
+  h+='<h2>'+d[0]+'</h2><p class="sub">Exemplo da escala usada na avaliação. As respostas aqui não são enviadas.</p><div class="scale"><div class="sh">'+d[0].toUpperCase()+'</div><div class="sq">'+d[1]+'</div><div class="sc"><div class="grid">';
+  h+='<div class="ends"><span>'+d[2]+'</span><span>'+d[3]+'</span></div>';
+  var ns=(idx=="2"||idx=="8");h+='<div class="row hd'+(ns?'':' x')+'"><div class="nm">Nome do avaliado</div>'+(ns?'<div class="t">Não sei avaliar</div>':'');
+  for(var i=0;i<=10;i++)h+='<div><span class="b" style="background:'+COL[i]+'">'+i+'</span></div>';
+  h+='</div>';
+  names.forEach(function(n,r){
+    var g="g"+idx+"_"+r;
+    h+='<div class="row'+(ns?'':' x')+'"><div class="nm">'+n+'</div>'+(ns?'<div><input type="checkbox" class="sw" aria-label="Não sei avaliar '+n+'"></div>':'');
+    for(var i=0;i<=10;i++)h+='<label class="cell" style="background:'+BG[i]+';--c:'+COL[i]+'"><input type="radio" name="'+g+'" value="'+i+'" aria-label="Nota '+i+'"></label>';
+    h+='</div>';
+  });
+  h+='</div></div></div><p class="note">Nota 0 = pior avaliação · Nota 10 = melhor avaliação.</p>';
+  s.insertAdjacentHTML("beforeend",h);
+});
+document.querySelectorAll(".sw").forEach(function(c){c.addEventListener("change",function(){
+  var row=c.closest(".row");row.classList.toggle("off",c.checked);
+  if(c.checked)row.querySelectorAll("input[type=radio]").forEach(function(r){r.checked=false});
+})});
+var nav=document.getElementById("nav"),secs=document.querySelectorAll("main section");
+secs.forEach(function(s,i){var a=document.createElement("a");a.href="#"+s.id;a.textContent=i+1;a.title="Slide "+(i+1);nav.appendChild(a)});
+var links=nav.querySelectorAll("a");
+function upd(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
+  links.forEach(function(l,i){l.classList.toggle("on",i===cur)});
+  var l=links[cur];if(l&&nav.scrollTo)nav.scrollTo({left:l.offsetLeft-nav.clientWidth/2+l.offsetWidth/2})}
+function go(id){var s=document.getElementById(id);if(!s)return;window.scrollTo({top:s.getBoundingClientRect().top+window.scrollY-70,behavior:"smooth"});try{history.replaceState(null,"","#"+id)}catch(e){}}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href^='#']");if(!a)return;e.preventDefault();go(a.getAttribute("href").slice(1))});
+if(location.hash)setTimeout(function(){go(location.hash.slice(1))},50);
+window.addEventListener("scroll",upd,{passive:true});upd();
+</script>
+</body>
+</html>
